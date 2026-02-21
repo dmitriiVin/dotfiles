@@ -1,0 +1,16 @@
+[user]
+	email = mitya10042003@mail.ru
+	name = dmitriivin
+[push]
+	autoSetupRemote = true
+	default = current
+[remote]
+	pushDefault = origin
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main

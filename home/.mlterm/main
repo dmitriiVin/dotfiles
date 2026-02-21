@@ -1,0 +1,41 @@
+use_variable_column_width = true
+use_anti_alias = true
+use_scrollbar = false
+color_count = 256
+use_xim = false
+
+alpha = 2
+
+# Размер шрифта (подбери под себя)
+fontsize = 18
+
+# === ЦВЕТА В СТИЛЕ FALLOUT ===
+# Фон — чисто чёрный
+bg_color = #000000
+
+# Текст — зелёный, как в старых терминалах
+fg_color = #00CC00
+
+# Курсор — зелёный блок
+cursor_style = block
+cursor_color = #00CC00
+cursor_bg_color = #00CC00
+
+# Цвет выделения (инвертированные цвета, как в Fallout)
+# Выделенный текст — чёрный на зелёном фоне
+select_fg_color = #000000
+select_bg_color = #00CC00
+
+# Цвета подчёркивания и рамок
+underline_color = #00CC00
+border_color = #00CC00
+
+# Цвета для bold-текста (если используется)
+bold_fg_color = #00FF00
+
+brightness = 30
+contrast = 30
+gamma = 30
+use_transbg = false
+wall_picture = 
+depth = 32
