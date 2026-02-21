@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Dotfiles */
 /* Main config Rofi Beats Config menu */
 
 @import "~/.config/rofi/config.rasi"  
@@ -14,7 +14,7 @@ entry {
   expand: false;
   width: 25%;
   width: 25%;
-  placeholder: " 📻 Choose Music Source";
+  placeholder: " Источник музыки";
   horizontal-align: 0.5;
   horizontal-align: 0.5;
 }

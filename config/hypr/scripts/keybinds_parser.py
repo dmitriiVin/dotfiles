@@ -34,7 +34,7 @@ def parse_files(files):
     seen_any_bind = {}      # combo -> True if seen
     default_seen = {}       # combo -> True if default bind exists
     
-    # We assume the last file in the list is the user config (UserKeybinds.conf)
+    # Последний файл списка трактуем как файл с возможными override-биндами
     # This matches the bash script logic where user_keybinds_conf is passed last
     if not files:
         return [], []

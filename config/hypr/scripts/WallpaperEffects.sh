@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
+# Dotfiles
 # Wallpaper Effects using ImageMagick (SUPER SHIFT W)
 
 # Variables

@@ -1,42 +1,41 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# For Searching via web browsers
+# Поиск в интернете через rofi и браузер по умолчанию
 
-# Define the path to the config file
-config_file=$HOME/.config/hypr/UserConfigs/01-UserDefaults.conf
+# Путь к пользовательскому конфигу
+config_file=$HOME/.config/hypr/configs/Defaults.conf
 if ! command -v jq >/dev/null 2>&1; then
-    notify-send -u low "Rofi Search" "jq is required for URL encoding. Please install jq."
+    notify-send -u low "Rofi Поиск" "Для кодирования URL нужен jq. Установите пакет jq."
     exit 1
 fi
 
-# Check if the config file exists
+# Проверяем наличие файла конфигурации
 if [[ ! -f "$config_file" ]]; then
-    echo "Error: Configuration file not found!"
+    echo "Ошибка: не найден файл конфигурации."
     exit 1
 fi
 
-# Process the config file in memory, removing the $ and fixing spaces
+# Подготавливаем переменные для source/eval
 config_content=$(sed 's/\$//g' "$config_file" | sed 's/ = /=/')
 
-# Source the modified content directly from the variable
+# Подгружаем содержимое
 eval "$config_content"
 
-# Check if $term is set correctly
+# Проверяем наличие переменной поиска
 if [[ -z "$Search_Engine" ]]; then
-    echo "Error: \$Search_Engine is not set in the configuration file!"
+    echo "Ошибка: в конфиге не задана переменная \$Search_Engine."
     exit 1
 fi
 
-# Rofi theme and message
+# Тема и сообщение для rofi
 rofi_theme="$HOME/.config/rofi/config-search.rasi"
-msg='‼️ **note** ‼️ search via default web browser'
+msg='Поиск откроется в браузере по умолчанию'
 
-# Kill Rofi if already running before execution
+# Если rofi уже запущен, перезапускаем его
 if pgrep -x "rofi" >/dev/null; then
     pkill rofi
 fi
 
-# Open Rofi and pass the selected query to xdg-open for the configured search engine
+# Получаем запрос и открываем его в браузере
 query=$(printf '' | rofi -dmenu -config "$rofi_theme" -mesg "$msg")
 
 if [[ -z "$query" ]]; then

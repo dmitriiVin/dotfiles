@@ -1,5 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Main Config - For Keybinds generation */
+/* Поиск горячих клавиш */
 
 @import "~/.config/rofi/config.rasi"  
 
@@ -13,7 +12,7 @@ mainbox {
 /* ---- Entry ---- */
 entry {
   expand: true;
-  placeholder: " 🧮 Search Keybinds";
+  placeholder: "Поиск по горячим клавишам";
 }
 
 /* ---- Listview ---- */

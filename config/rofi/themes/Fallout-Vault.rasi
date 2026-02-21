@@ -1,0 +1,119 @@
+/* Fallout Vault rofi theme */
+
+configuration {
+  modi: "drun,run,filebrowser";
+  show-icons: true;
+  display-drun: "Программы";
+  display-run: "Команда";
+  display-filebrowser: "Файлы";
+  drun-display-format: "{name}";
+  hover-select: true;
+}
+
+* {
+  bg: #081009ee;
+  bg-soft: #0d1a11ee;
+  fg: #8cff6a;
+  fg-dim: #6f9a6f;
+  accent: #bfff79;
+  warn: #ffd35a;
+  urgent: #ff6b57;
+
+  background-color: transparent;
+  text-color: @fg;
+}
+
+window {
+  width: 42%;
+  border: 2px;
+  border-radius: 10px;
+  border-color: @accent;
+  background-color: @bg;
+}
+
+mainbox {
+  spacing: 10px;
+  padding: 16px;
+  background-color: transparent;
+  children: ["inputbar", "message", "listview", "mode-switcher"];
+}
+
+inputbar {
+  spacing: 8px;
+  padding: 10px;
+  border: 1px;
+  border-radius: 8px;
+  border-color: @fg-dim;
+  background-color: @bg-soft;
+  children: ["prompt", "entry"];
+}
+
+prompt {
+  text-color: @warn;
+}
+
+entry {
+  placeholder: "Введите запрос...";
+  placeholder-color: @fg-dim;
+}
+
+listview {
+  lines: 8;
+  columns: 1;
+  spacing: 6px;
+  scrollbar: true;
+  padding: 6px;
+  border: 1px;
+  border-radius: 8px;
+  border-color: alpha(@fg-dim, 0.8);
+  background-color: alpha(#0a130c, 0.9);
+}
+
+element {
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+element normal.normal {
+  background-color: transparent;
+  text-color: @fg;
+}
+
+element selected.normal {
+  background-color: @accent;
+  text-color: #081009;
+}
+
+element normal.urgent,
+element selected.urgent {
+  background-color: @urgent;
+  text-color: #081009;
+}
+
+mode-switcher {
+  spacing: 6px;
+}
+
+button {
+  padding: 8px 10px;
+  border: 1px;
+  border-radius: 8px;
+  border-color: @fg-dim;
+  background-color: @bg-soft;
+}
+
+button selected {
+  background-color: @warn;
+  text-color: #081009;
+}
+
+message {
+  border: 0;
+}
+
+textbox {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: alpha(#0a130c, 0.9);
+  text-color: @fg-dim;
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# Dotfiles
 # Simple bash script to check and will try to update your system
 
 # Local Paths

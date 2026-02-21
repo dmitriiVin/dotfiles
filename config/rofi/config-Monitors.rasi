@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Dotfiles */
 /* Monitor Profiles Menu */
 
 @import "~/.config/rofi/config.rasi" 
@@ -18,7 +18,7 @@ window {
 /* ---- Entry ---- */ 
 entry {
   width: 43%;
-  placeholder: " 💻 Search / Choose which Monitor Profiles to load";
+  placeholder: " Выбор профиля монитора";
   horizontal-align: 0.5;
 }
 

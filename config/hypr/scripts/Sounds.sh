@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# Dotfiles
 # This script is used to play system sounds.
 # Script is used by Volume.Sh and ScreenShots.sh 
 

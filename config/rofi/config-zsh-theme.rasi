@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Dotfiles */
 /* Oh My ZSH Theme */
 
 @import "~/.config/rofi/config.rasi"  
@@ -32,7 +32,7 @@ inputbar {
 
 entry {
   expand: true;
-  placeholder: " 🪟  Search / Choose ZSH theme";
+  placeholder: " Выбор темы ZSH";
 }
 
 /* ---- Listview ---- */

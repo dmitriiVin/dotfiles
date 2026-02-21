@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Dotfiles */
 /* Main Config - emoji */
 
 @import "~/.config/rofi/config.rasi" 
@@ -18,7 +18,7 @@ window {
 /* ---- Entry ---- */
 entry {
   width: 37%;
-  placeholder: " 💫 Search / Choose Emoji's";
+  placeholder: " Выбор эмодзи";
   horizontal-align: 0.0;
 }
 

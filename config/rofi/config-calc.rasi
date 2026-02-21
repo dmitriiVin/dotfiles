@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Dotfiles */
 /* Main Config Calculator */
 /* Submitted by: https://github.com/JosephArmas */
 
@@ -19,7 +19,7 @@ window {
 /* ---- Entry ---- */
 entry {
   expand: true;
-  placeholder: " 🧮 Calculate";
+  placeholder: " Калькулятор";
 }
 
 listview {enable: false;}

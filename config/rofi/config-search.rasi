@@ -1,5 +1,5 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Rofi Config for Google Search) */
+/* Dotfiles */
+/* Конфиг Rofi для веб-поиска */
 
 @import "~/.config/rofi/config.rasi"  
 
@@ -18,7 +18,7 @@ window {
 /* ---- Entry ---- */ 
 entry {
 	expand: true;
-	placeholder: " 🔎 Google Search";
+	placeholder: " Поиск в интернете";
 	horizontal-align: 0.5;
 	padding: 15px;
 	border-radius: inherit;

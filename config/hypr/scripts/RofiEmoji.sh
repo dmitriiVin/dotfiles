@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# Dotfiles
 
 # Variables
 rofi_theme="$HOME/.config/rofi/config-emoji.rasi"

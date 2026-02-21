@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Dotfiles */
 /* Wallpaper Effects */
 
 @import "~/.config/rofi/config.rasi" 
@@ -13,7 +13,7 @@ mainbox {
 /* ---- Entry ---- */ 
 entry {
   width: 32%;
-  placeholder: " 🏙️ Search / Choose desired wallpaper effect";
+  placeholder: " Выбор эффекта обоев";
 }
 
 /* ---- Window ---- */

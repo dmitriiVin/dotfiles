@@ -1,35 +1,34 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# Script for waybar styles
+# Выбор стиля Waybar
 
 IFS=$'\n\t'
 
-# Define directories
+# Пути
 waybar_styles="$HOME/.config/waybar/style"
 waybar_style="$HOME/.config/waybar/style.css"
 SCRIPTSDIR="$HOME/.config/hypr/scripts"
 rofi_config="$HOME/.config/rofi/config-waybar-style.rasi"
-msg=' 🎌 NOTE: Some waybar STYLES NOT fully compatible with some LAYOUTS'
+msg='Некоторые стили Waybar могут отображаться некорректно с отдельными макетами'
 
-# Apply selected style
+# Применяем выбранный стиль
 apply_style() {
     ln -sf "$waybar_styles/$1.css" "$waybar_style"
     "${SCRIPTSDIR}/Refresh.sh" &
 }
 
 main() {
-    # resolve current symlink and strip .css
+    # Текущий активный стиль (по symlink)
     current_target=$(readlink -f "$waybar_style")
     current_name=$(basename "$current_target" .css)
 
-    # gather all style names (without .css) into an array
+    # Список доступных стилей
     mapfile -t options < <(
         find -L "$waybar_styles" -maxdepth 1 -type f -name '*.css' \
             -exec basename {} .css \; \
             | sort
     )
 
-    # mark the active style and record its index
+    # Отмечаем активный стиль
     default_row=0
     MARKER="👉"
     for i in "${!options[@]}"; do
@@ -40,7 +39,7 @@ main() {
         fi
     done
 
-    # launch rofi with the annotated list and pre‑selected row
+    # Показываем выбор в rofi
     choice=$(printf '%s\n' "${options[@]}" \
         | rofi -i -dmenu \
                -config "$rofi_config" \
@@ -48,14 +47,14 @@ main() {
                -selected-row "$default_row"
     )
 
-    [[ -z "$choice" ]] && { echo "No option selected. Exiting."; exit 0; }
+    [[ -z "$choice" ]] && { echo "Стиль не выбран. Выход."; exit 0; }
 
-    # remove annotation and apply
+    # Убираем маркер и применяем
     choice=${choice#"$MARKER "}
     apply_style "$choice"
 }
 
-# Kill Rofi if already running before execution
+# Если rofi уже запущен, перезапускаем его
 if pgrep -x "rofi" >/dev/null; then
     pkill rofi
     #exit 0

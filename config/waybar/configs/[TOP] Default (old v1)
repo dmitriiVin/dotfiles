@@ -1,6 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-
-// ### DEFAULT - Top (old v1) ### //
+/* Базовый верхний макет Waybar (old v1) */
 {
 "include": [
   "$HOME/.config/waybar/Modules",

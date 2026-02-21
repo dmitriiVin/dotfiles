@@ -1,32 +1,31 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
-# This file used on waybar modules sourcing defaults set in $HOME/.config/hypr/UserConfigs/01-UserDefaults.conf
+# Скрипт для модулей Waybar: запуск терминала/файлового менеджера
 
-# Define the path to the config file
-config_file=$HOME/.config/hypr/UserConfigs/01-UserDefaults.conf
+# Путь к пользовательскому конфигу
+config_file=$HOME/.config/hypr/configs/Defaults.conf
 
-# Check if the config file exists
+# Проверяем наличие файла конфигурации
 if [[ ! -f "$config_file" ]]; then
-    echo "Error: Configuration file not found!"
+    echo "Ошибка: не найден файл конфигурации."
     exit 1
 fi
 
-# Process the config file in memory, removing the $ and fixing spaces
+# Подготавливаем переменные для source/eval
 config_content=$(sed 's/\$//g' "$config_file" | sed 's/ = /=/')
 
-# Source the modified content directly from the variable
+# Подгружаем содержимое
 eval "$config_content"
 
-# Check if $term is set correctly
+# Проверяем наличие терминала в переменной $term
 if [[ -z "$term" ]]; then
-    echo "Error: \$term is not set in the configuration file!"
+    echo "Ошибка: в конфиге не задана переменная \$term."
     exit 1
 fi
 
-# Execute accordingly based on the passed argument
+# Выполняем действие по аргументу
 launch_files() {
     if [[ -z "$files" ]]; then
-        notify-send -u low -i "$HOME/.config/swaync/images/error.png" "Waybar: files" "Set \$files in 01-UserDefaults.conf or install a default file manager."
+        notify-send -u low -i "$HOME/.config/swaync/images/error.png" "Waybar: файлы" "Задайте \$files в configs/Defaults.conf или установите файловый менеджер."
         return 1
     fi
     eval "$files &"
@@ -43,10 +42,10 @@ elif [[ "$1" == "--term" ]]; then
 elif [[ "$1" == "--files" ]]; then
     launch_files
 else
-    echo "Usage: $0 [--btop | --nvtop | --nmtui | --term]"
-    echo "--btop       : Open btop in a new term"
-    echo "--nvtop      : Open nvtop in a new term"
-    echo "--nmtui      : Open nmtui in a new term"
-    echo "--term   : Launch a term window"
-    echo "--files  : Launch a file manager"
+    echo "Использование: $0 [--btop | --nvtop | --nmtui | --term | --files]"
+    echo "--btop   : открыть btop в терминале"
+    echo "--nvtop  : открыть nvtop в терминале"
+    echo "--nmtui  : открыть nmtui в терминале"
+    echo "--term   : запустить терминал"
+    echo "--files  : запустить файловый менеджер"
 fi

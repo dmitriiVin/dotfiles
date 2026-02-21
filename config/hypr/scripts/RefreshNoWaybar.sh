@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-
-# Modified version of Refresh.sh but waybar wont refresh
-# Used by automatic wallpaper change
-# Modified inorder to refresh rofi background, Wallust, SwayNC only
+# Обновление rofi/wallust/swaync без перезапуска Waybar
 
 SCRIPTSDIR=$HOME/.config/hypr/scripts
-UserScripts=$HOME/.config/hypr/UserScripts
+scriptsDir=$HOME/.config/hypr/scripts
 
 # Define file_exists function
 file_exists() {
@@ -38,10 +34,10 @@ sleep 0.2
 # reload swaync
 swaync-client --reload-config
 
-# Relaunching rainbow borders if the script exists
+# Повторный запуск RainbowBorders при наличии скрипта
 sleep 1
-if file_exists "${UserScripts}/RainbowBorders.sh"; then
-    ${UserScripts}/RainbowBorders.sh &
+if file_exists "${scriptsDir}/RainbowBorders.sh"; then
+    ${scriptsDir}/RainbowBorders.sh &
 fi
 
 

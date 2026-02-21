@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# This is for changing kb_layouts. Set kb_layouts in "$HOME/.config/hypr/UserConfigs/UserSettings.conf"
+# Dotfiles
+# This is for changing kb_layouts. Set kb_layouts in "$HOME/.config/hypr/configs/SystemSettings.conf"
 
 notif_icon="$HOME/.config/swaync/images/ja.png"
 SCRIPTSDIR="$HOME/.config/hypr/scripts"

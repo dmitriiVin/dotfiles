@@ -1,8 +1,4 @@
-//* ---- 💫 https://github.com/JaKooLit 💫 ---- *//
-/* Waybar Modules - Custom Modules */
-/* Basically created to reduce the lines in Waybar Modules bank */
-/* NOTE: This is only for Custom Modules */
-/* Custom Modules like weather browser, tty, file manager at the beginning */
+/* Пользовательские модули Waybar */
 
 {
 "custom/weather": {
@@ -11,9 +7,9 @@
 	"format-alt-click": "click",
 	"interval": 3600,
 	"return-type": "json",
-	//"exec": "$HOME/.config/hypr/UserScripts/Weather.py",
-	//"exec": "$HOME/.config/hypr/UserScripts/Weather.sh",
-	"exec": "$HOME/.config/hypr/UserScripts/WeatherWrap.sh",
+	//"exec": "$HOME/.config/hypr/scripts/Weather.py",
+	//"exec": "$HOME/.config/hypr/scripts/Weather.sh",
+	"exec": "$HOME/.config/hypr/scripts/WeatherWrap.sh",
 	//"exec-if": "ping wttr.in -c1",
 	"tooltip": true,
 },
@@ -22,44 +18,44 @@
 	"format": "",
 	"on-click": "hyprpicker | wl-copy",
 	"tooltip": true,
-	"tooltip-format": "Hyprpicker",
+	"tooltip-format": "Пипетка цвета (копировать в буфер)",
 },
 
 "custom/file_manager": {
 	"format": " ",
 	"on-click": "$HOME/.config/hypr/scripts/WaybarScripts.sh --files",
 	"tooltip": true,
-	"tooltip-format": "File Manager",
+	"tooltip-format": "Файловый менеджер",
 },
 
 "custom/tty": {
 	"format": " ",
 	"on-click": "$HOME/.config/hypr/scripts/WaybarScripts.sh --term",
 	"tooltip": true,
-	"tooltip-format": "Launch Terminal",
+	"tooltip-format": "Запустить терминал",
 },
 
 "custom/browser": {
 	"format": " ",
 	"on-click": "xdg-open https://",
 	"tooltip": true,
-	"tooltip-format": "Launch Browser",
+	"tooltip-format": "Открыть браузер",
 },
 
 "custom/settings": {
 	"format": " ",
-	"on-click": "$HOME/.config/hypr/scripts/Kool_Quick_Settings.sh",
+	"on-click": "$HOME/.config/hypr/scripts/QuickSettings.sh",
 	"tooltip": true,
-	"tooltip-format": "Launch KooL Hyprland Settings Menu",
+	"tooltip-format": "Меню настроек Hyprland",
 },
 
 "custom/cycle_wall": {
 	"format": " ",
-	"on-click": "$HOME/.config/hypr/UserScripts/WallpaperSelect.sh",
-	"on-click-right": "$HOME/.config/hypr/UserScripts/WallpaperRandom.sh",
+	"on-click": "$HOME/.config/hypr/scripts/WallpaperSelect.sh",
+	"on-click-right": "$HOME/.config/hypr/scripts/WallpaperRandom.sh",
 	"on-click-middle": "$HOME/.config/hypr/scripts/WaybarStyles.sh",
 	"tooltip": true,
-	"tooltip-format": "Left Click: Wallpaper Menu\nMiddle Click: Random wallpaper\nRight Click: Waybar Styles Menu",
+	"tooltip-format": "ЛКМ: меню обоев\nСКМ: случайные обои\nПКМ: стили Waybar",
 },
 
 "custom/hint": {
@@ -67,14 +63,14 @@
 	"on-click": "$HOME/.config/hypr/scripts/KeyHints.sh",
 	"on-click-right": "$HOME/.config/hypr/scripts/KeyBinds.sh",
 	"tooltip": true,
-	"tooltip-format": "Left Click: Quick Tips\nRight Click: Keybinds",
+	"tooltip-format": "ЛКМ: шпаргалка\nПКМ: список биндов",
 },
 
 "custom/dot_update": {
 	"format": " 󰁈 ",
-	"on-click": "$HOME/.config/hypr/scripts/KooLsDotsUpdate.sh",
+	"on-click": "$HOME/.config/hypr/scripts/DotsUpdate.sh",
 	"tooltip": true,
-	"tooltip-format": "Check KooL Dots update\nIf available",
+	"tooltip-format": "Проверить обновление набора конфигов",
 },
 
 // Hypridle inhibitor
@@ -100,9 +96,9 @@
 	"format": "󰔎 ",
 	"on-click": "$HOME/.config/hypr/scripts/DarkLight.sh",
 	"on-click-right": "$HOME/.config/hypr/scripts/WaybarStyles.sh",
-	"on-click-middle": "$HOME/.config/hypr/UserScripts/WallpaperSelect.sh",
+	"on-click-middle": "$HOME/.config/hypr/scripts/WallpaperSelect.sh",
 	"tooltip": true,
-	"tooltip-format": "Left Click: Switch Dark-Light Themes\nMiddle Click: Wallpaper Menu\nRight Click: Waybar Styles Menu",
+	"tooltip-format": "ЛКМ: светлая/тёмная тема\nСКМ: обои\nПКМ: стили Waybar",
 },
 
 // Night light (Hyprsunset)
@@ -114,7 +110,7 @@
 	"min-length": 2,
 	"on-click": "$HOME/.config/hypr/scripts/Hyprsunset.sh toggle",
 	"tooltip": true,
-	"tooltip-format": "Night light toggle",
+	"tooltip-format": "Ночной режим",
 	"escape": false
 },
 
@@ -122,16 +118,16 @@
 	"format": "󰌾",
 	"on-click": "$HOME/.config/hypr/scripts/LockScreen.sh",
 	"tooltip": true,
-	"tooltip-format": "󰷛 Screen Lock",
+	"tooltip-format": "Блокировка экрана",
 },
 
 "custom/menu": {
 	"format": "  ",
 	"on-click": "pkill rofi || rofi -show drun -modi run,drun,filebrowser,window",
-	"on-click-middle": "$HOME/.config/hypr/UserScripts/WallpaperSelect.sh",
+	"on-click-middle": "$HOME/.config/hypr/scripts/WallpaperSelect.sh",
 	"on-click-right": "$HOME/.config/hypr/scripts/WaybarLayout.sh",
 	"tooltip": true,
-	"tooltip-format": "Left Click: Rofi Menu\nMiddle Click: Wallpaper Menu\nRight Click: Waybar Layout Menu",
+	"tooltip-format": "ЛКМ: меню приложений\nСКМ: обои\nПКМ: макеты Waybar",
 },
 // This is a custom cava visualizer
 "custom/cava_mviz": {
@@ -158,26 +154,26 @@
 	"on-click": "$HOME/.config/hypr/scripts/Wlogout.sh",
 	"on-click-right": "$HOME/.config/hypr/scripts/ChangeBlur.sh",
 	"tooltip": true,
-	"tooltip-format": "Left Click: Logout Menu\nRight Click: Change Blur",
+	"tooltip-format": "ЛКМ: меню выхода\nПКМ: изменить blur",
 },
 
 "custom/reboot": {
     "format": "󰜉",
     "on-click": "systemctl reboot",
-    "tooltip": true,
-	"tooltip-format": "Left Click: Reboot",
+	"tooltip": true,
+	"tooltip-format": "Перезагрузка",
 },
     
 "custom/quit": {
     "format": "󰗼",
     "on-click": "hyprctl dispatch exit",
-    "tooltip": true,
-	"tooltip-format": "Left Click: Exit Hyprland",
+	"tooltip": true,
+	"tooltip-format": "Выход из Hyprland",
 },
 
 "custom/swaync": {
 	"tooltip": true,
-	"tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+	"tooltip-format": "ЛКМ: центр уведомлений\nПКМ: не беспокоить",
 	"format": "{} {icon} ",
 	"format-icons": {
 		"notification": "<span foreground='red'><sup></sup></span>",
@@ -205,7 +201,7 @@
 	"interval": 43200, // (Arch Linux will try to check 12 hrs interval only
 	"on-click": "$HOME/.config/hypr/scripts/Distro_update.sh",
 	"tooltip": true,
-	"tooltip-format": "Left Click: Update System\nArch (w/ notification)\nFedora, OpenSuse, Debian/Ubuntu click to update",
+	"tooltip-format": "Обновить систему",
 },
 // Separators
 "custom/separator#dot": {

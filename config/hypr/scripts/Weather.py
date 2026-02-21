@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
+# Dotfiles
 # Rewritten to use Open-Meteo APIs (worldwide, no API key) for robust weather data.
 # Outputs Waybar-compatible JSON and a simple text cache.
 
@@ -18,7 +18,7 @@ import requests
 # Examples (zsh):
 #   # One-off run
 #   # WEATHER_UNITS can be "metric" or "imperial"
-#   WEATHER_UNITS=imperial WEATHER_PLACE="Concord, NH" python3 ~/.config/hypr/UserScripts/Weather.py
+#   WEATHER_UNITS=imperial WEATHER_PLACE="Concord, NH" python3 ~/.config/hypr/scripts/Weather.py
 #
 #   # Persist in current shell session
 #   export WEATHER_UNITS=imperial

@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Dotfiles */
 /* Main Config Rofi Theme */
 
 @import "~/.config/rofi/config.rasi"  
@@ -27,7 +27,7 @@ custombox {
 /* ---- Entry input ---- */
 entry {
   expand: true;
-  placeholder: " ⬇️  Select Which Rofi Theme wanted to apply";
+  placeholder: " Выберите тему Rofi";
 }
 
 /* ---- Listview ---- */

@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Dotfiles */
 /* Rofi Beats Config */
 
 @import "~/.config/rofi/config.rasi" 
@@ -17,7 +17,7 @@ mainbox {
 
 /* ---- Entry ---- */ 
 entry {
-  placeholder: "📻 Choose Media or Stations to play";
+  placeholder: " Выбор музыки или станции";
 }
 
 /* ---- Listview ---- */

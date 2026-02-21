@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# Scripts for refreshing ags, waybar, rofi, swaync, wallust
+# Скрипт перезапуска панелей/виджетов
 
 SCRIPTSDIR=$HOME/.config/hypr/scripts
-UserScripts=$HOME/.config/hypr/UserScripts
+scriptsDir=$HOME/.config/hypr/scripts
 
 # Define file_exists function
 file_exists() {
@@ -49,10 +48,10 @@ swaync >/dev/null 2>&1 &
 # reload swaync
 swaync-client --reload-config
 
-# Relaunching rainbow borders if the script exists
+# Повторный запуск RainbowBorders при наличии скрипта
 sleep 1
-if file_exists "${UserScripts}/RainbowBorders.sh"; then
-  ${UserScripts}/RainbowBorders.sh &
+if file_exists "${scriptsDir}/RainbowBorders.sh"; then
+  ${scriptsDir}/RainbowBorders.sh &
 fi
 
 exit 0

@@ -1,16 +1,12 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Ja KooLit - Global rofi fonts */
+/* Общие шрифты Rofi */
 
-/* This is where you can change fonts and sizes */
-
-
-/*****-- Fonts Size and Font Size -----*****/
+/***** Размер основного шрифта *****/
 configuration {
-  font: "JetBrainsMono Nerd Font SemiBold 15";
+  font: "MonaspiceNe Nerd Font SemiBold 14";
 }
 
 
-/*****-- Elements Font Size -----*****/
+/***** Размер шрифта элементов *****/
 element-text {
-  font: "JetBrainsMono Nerd Font SemiBold 13";
+  font: "MonaspiceNe Nerd Font SemiBold 13";
 }

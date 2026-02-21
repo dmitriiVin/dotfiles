@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Dotfiles */
 /* Main Config (wallpaper) */
 
 @import "~/.config/rofi/config.rasi"  
@@ -21,7 +21,7 @@ mainbox {
 
 entry {
   expand: true;
-  placeholder: " 🎞️ Search / Choose Wallpaper";
+  placeholder: " Выбор обоев";
   horizontal-align: 0.5;
   horizontal-align: 0.5;
 }

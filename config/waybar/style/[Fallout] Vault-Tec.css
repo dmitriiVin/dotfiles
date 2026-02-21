@@ -1,0 +1,131 @@
+/* Fallout Vault-Tec style */
+
+@define-color pipbg rgba(8, 16, 10, 0.88);
+@define-color pipbg_soft rgba(11, 22, 13, 0.90);
+@define-color pipline #2f6c3f;
+@define-color pipmain #8cff6a;
+@define-color pipwarn #ffd35a;
+@define-color pipdanger #ff6b57;
+@define-color pipmuted #7aa57a;
+
+* {
+  font-family: "MonaspiceNe Nerd Font", "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 0;
+}
+
+window#waybar {
+  background: linear-gradient(180deg, rgba(8, 14, 9, 0.95), rgba(7, 12, 8, 0.88));
+  border: 1px solid alpha(@pipline, 0.8);
+  border-radius: 10px;
+  color: @pipmain;
+}
+
+window#waybar.hidden {
+  opacity: 0.25;
+}
+
+tooltip {
+  background: @pipbg_soft;
+  border: 1px solid alpha(@pipmain, 0.45);
+  border-radius: 8px;
+  color: @pipmain;
+}
+
+#workspaces button,
+#taskbar button {
+  color: @pipmuted;
+  border-radius: 8px;
+  padding: 2px 8px;
+  transition: all 0.2s ease;
+}
+
+#workspaces button.active,
+#taskbar button.active {
+  color: #091108;
+  background: @pipmain;
+}
+
+#workspaces button:hover,
+#taskbar button:hover {
+  color: @pipmain;
+  background: alpha(@pipmain, 0.14);
+}
+
+#backlight,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mpris,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#workspaces,
+#custom-cava_mviz,
+#custom-hint,
+#custom-hypridle,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-menu,
+#custom-nightlight,
+#custom-power,
+#custom-swaync,
+#custom-weather,
+#custom-updater,
+#custom-tty,
+#custom-file_manager,
+#custom-browser {
+  background: @pipbg;
+  border: 1px solid alpha(@pipline, 0.65);
+  border-radius: 8px;
+  margin: 4px 3px;
+  padding: 3px 8px;
+  color: @pipmain;
+}
+
+#clock {
+  color: @pipwarn;
+}
+
+#custom-menu,
+#custom-lock,
+#custom-nightlight,
+#idle_inhibitor,
+#custom-hypridle {
+  color: @pipwarn;
+}
+
+#custom-power {
+  color: @pipdanger;
+}
+
+#network.disconnected,
+#pulseaudio.muted,
+#battery.critical:not(.charging),
+#temperature.critical {
+  color: @pipdanger;
+}
+
+#custom-weather {
+  color: #b6ff9b;
+}
+
+#custom-separator\#dot-line,
+#custom-separator\#dot {
+  color: alpha(@pipmain, 0.6);
+  background: transparent;
+  border: none;
+  padding: 0 3px;
+}
+
+#tray menu {
+  background: @pipbg_soft;
+  color: @pipmain;
+}
