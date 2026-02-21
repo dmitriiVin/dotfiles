@@ -1,0 +1,53 @@
+{
+  "diagnostic.enable": true,
+  "diagnostic.level": "information",
+  "diagnostic.autoRefresh": true,
+  "diagnostic.refreshOnInsertMode": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.messageTarget": "float",
+  "diagnostic.displayByAle": false,
+  "coc.preferences.rootPatterns": [
+    ".git",
+    ".hg",
+    "pyproject.toml",
+    "requirements.txt",
+    "Cargo.toml",
+    "package.json",
+    "tsconfig.json",
+    "jsconfig.json",
+    "CMakeLists.txt",
+    "*.sln",
+    "*.csproj"
+  ],
+  "pyright.enable": true,
+  "pyright.server": "~/.config/coc/extensions/node_modules/pyright/langserver.index.js",
+  "pyright.disableDiagnostics": false,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "cmake.lsp.enable": false,
+  "cmake.lsp.serverPath": "neocmakelsp",
+  "cmake.lsp.buildDirectory": "build",
+  "languageserver": {
+    "cmake-neocmakelsp": {
+      "command": "neocmakelsp",
+      "args": [
+        "stdio"
+      ],
+      "filetypes": [
+        "cmake"
+      ],
+      "rootPatterns": [
+        ".git",
+        "CMakeLists.txt"
+      ],
+      "requireRootPattern": false
+    }
+  }
+}
